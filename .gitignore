@@ -335,3 +335,4 @@ package/
 tools/
 .ionide/
 .vscode/
+.farmer/

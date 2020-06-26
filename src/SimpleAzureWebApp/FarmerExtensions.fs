@@ -28,7 +28,7 @@ type Sku with
 
 type Location with
   static member FromString(s:string) =
-    match s.ToUpper() with
+    match s with
     | "EastAsia" -> Location.EastAsia
     | "SoutheastAsia" -> Location.SoutheastAsia
     | "CentralUS" -> Location.CentralUS

@@ -25,16 +25,17 @@ let main argv =
         add_resource webApp
     }
 
-    printf "Authenticating with Azure"
+    printf "Authenticating with Azure\n"
     Deploy.authenticate azAppId azSecret azTenantId
     |> ignore
 
-    printf "Deploying Azure WebApp %s (%s) into %s using Farmer" azWebAppName azResourceGroupName azWebAppLocation
+    printf "Deploying Azure WebApp %s (%s) into %s using Farmer\n" azWebAppName azResourceGroupName azWebAppLocation
+    
     deployment
     |> Deploy.execute azResourceGroupName Deploy.NoParameters
     |> ignore
 
-    printf "Deployment of Azure WebApp %s (%s) complete!" azWebAppName azResourceGroupName
+    printf "Deployment of Azure WebApp %s (%s) complete!\n" azWebAppName azResourceGroupName
 
     0 // return an integer exit code
 
